@@ -1,0 +1,12 @@
+---
+import PostCard from "./PostCard.astro";
+
+const { posts } = Astro.props;
+---
+
+<div class:list={[
+    'grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14',
+    'mt-12'
+]}>
+    {posts.map((post: any) => <PostCard url={post.url} data={post.frontmatter} />)}
+</div>

@@ -1,0 +1,30 @@
+---
+import menu from "/icons/menu.svg?raw"; 
+---
+<div class:list={[
+    'grid lg:hidden grid-cols-2 gap-x-2 items-center',
+    'relative',
+    'cursor-pointer',
+    'group',
+    ''
+]}>
+    <Fragment
+        set:html={menu}
+    />
+    <ul class:list={[
+        'w-36',
+        'absolute top-6 z-10',
+        'bg-[#1F2937] bg-opacity-90',
+        'pt-2 px-4',
+        'rounded-xl',
+        'text-sm',
+        'group-hover:block hidden'
+    ]}>
+        <li class="mb-2"><a href="/tags/UI Design">UI Design</a></li>
+        <li class="mb-2"><a href="/tags/Front-end">Front-end</a></li>
+        <li class="mb-2"><a href="/tags/Back-end">Back-end</a></li>
+        <li class="mb-2"><a href="/tags/INSPIRATIONS">Inspirations</a></li>
+        <li class="mb-2"><a href="/tags/INTERNET">Internet</a></li>
+        <li class="mb-2"><a href="/tags/9 TO 5">9 TO 5</a></li>
+    </ul>
+</div>

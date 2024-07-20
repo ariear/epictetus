@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroPostCard from '../components/organisms/HeroPostCard.astro';
+import WrapPostCard from '../components/organisms/WrapPostCard.astro';
+
+let allPosts = await Astro.glob("../pages/posts/*.md");
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.pubDate).getTime();
+  const dateB = new Date(b.frontmatter.pubDate).getTime();
+  return dateB - dateA;
+});
+const mainPost = allPosts[0];
+allPosts = allPosts.slice(1)
+---
+
+<Layout title="Epictetus">
+	<HeroPostCard
+		data={mainPost.frontmatter}
+		url={mainPost.url}
+	/>
+	<WrapPostCard
+		posts={allPosts}
+	/>
+</Layout>

@@ -1,0 +1,26 @@
+---
+import searchIcon from '/icons/search.svg?raw';
+---
+<div class:list={[
+    'w-[240px]',
+    'bg-[#1F2937] bg-opacity-60',
+    'flex items-center',
+    'py-2 px-3',
+    'rounded-full'
+]}>
+    <label for="search">
+        <Fragment set:html={searchIcon} />
+    </label>
+    <input
+        type="text"
+        id="search"
+        placeholder="search ..."
+        class:list={[
+            'ml-4',
+            'w-full',
+            'text-sm',
+            'bg-transparent',
+            'focus:outline-none'
+        ]}
+    />
+</div>

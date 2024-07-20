@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import AuthorBadge from '../molecules/AuthorBadge.astro';
+import PostInfo from '../atoms/PostInfo.astro';
+
+const { data, url } = Astro.props;
+---
+<article class:list={[
+    'flex md:items-center flex-col md:flex-row',
+    'relative'
+]}>
+    <aside class:list={[
+        'md:w-6/12 lg:w-8/12 h-[200px] sm:h-[342px]',
+        'md:mr-8 md:mb-0 mb-5'
+    ]}>
+        <a href={url}>
+            <Image
+                src={data.image.url}
+                width={700}
+                height={400}
+                class:list={[
+                    'w-full h-full',
+                    'object-cover',
+                    'rounded-xl'
+                ]}
+                alt={data.image.alt}
+            />
+        </a>
+    </aside>
+    <aside class="md:w-6/12 lg:w-4/12">
+        <PostInfo
+            tags={data.tags}
+            pubDate={data.pubDate}
+        />
+        <a href={url} class:list={[
+            'block',
+            'text-2xl',
+            'leading-relaxed',
+            'mt-3 mb-4'
+        ]}>{data.title}</a>
+        <p class:list={[
+            'text-white/80',
+            'leading-relaxed',
+            'mb-5'
+        ]}>{data.description}</p>
+        <AuthorBadge
+            photo={data.author.photo}
+            name={data.author.name}
+            role={data.author.role}
+        />
+    </aside>
+</article>

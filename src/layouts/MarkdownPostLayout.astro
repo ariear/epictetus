@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import PostInfo from "../components/atoms/PostInfo.astro";
+import AuthorBadge from "../components/molecules/AuthorBadge.astro";
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`Epictetus | ${frontmatter.title}`}>
+    <div class:list={[
+        'flex flex-col items-center',
+        'mb-10'
+    ]}>
+        <div class:list={[
+            'mt-6 mb-3'
+        ]}>
+            <PostInfo
+                tags={frontmatter.tags}
+                pubDate={frontmatter.pubDate}
+            />
+        </div>
+        <h1 class:list={[
+            'sm:w-[500px]',
+            'text-2xl text-center',
+            'leading-relaxed',
+            'mb-7'
+        ]}>
+        {frontmatter.title}
+        </h1>
+        <AuthorBadge
+            photo={frontmatter.author.photo}
+            name={frontmatter.author.name}
+            role={frontmatter.author.role}
+        />
+    </div>
+    <Image
+        src={frontmatter.image.url}
+        alt={frontmatter.image.alt}
+        width={700}
+        height={400}
+        class:list={[
+            'w-full',
+            'rounded-xl',
+            'mb-10 md:mb-16'
+        ]}
+    />
+    <div class:list={[
+        'w-full',
+        'prose-base prose-p:text-lg',
+        'text-white',
+        'md:px-6 lg:px-12'
+    ]}>
+        <slot />
+    </div>
+</Layout>

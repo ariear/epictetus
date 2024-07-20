@@ -1,0 +1,66 @@
+---
+import InputSearch from "../molecules/InputSearch.astro";
+import MobileMenu from "../molecules/MobileMenu.astro";
+import logo from "/icons/logo.svg?raw"; 
+import down from "/icons/nav-down.svg?raw";
+import search from "/icons/search.svg?raw";
+---
+<nav class:list={[
+    'flex items-center justify-between',
+    'pt-5 sm:pt-12 pb-5 sm:pb-10'
+]}>
+    <MobileMenu />
+    <aside class="flex items-center">
+        <a href="/">
+            <Fragment
+                set:html={logo}
+            />
+        </a>
+        <ul class:list={[
+            'hidden lg:flex',
+            'ml-16'
+        ]}>
+            <li class="mr-11">
+                <a href="/tags/UI Design">UI Design</a>
+            </li>
+            <li class="mr-11">
+                <a href="/tags/Front-end">Front-end</a>
+            </li>
+            <li class="mr-11">
+                <a href="/tags/Back-end">Back-end</a>
+            </li>
+            <li class:list={[
+                'grid grid-cols-2 gap-x-2 items-center',
+                'relative',
+                'cursor-pointer',
+                'group'
+            ]}>
+                <a>Lainnya</a>
+                <Fragment
+                    set:html={down}
+                />
+                <ul class:list={[
+                    'w-36',
+                    'absolute top-6 z-10',
+                    'bg-[#1F2937] bg-opacity-90',
+                    'pt-2 px-4',
+                    'rounded-xl',
+                    'text-sm',
+                    'group-hover:block hidden'
+                ]}>
+                    <li class="mb-2"><a href="/tags/INSPIRATIONS">Inspirations</a></li>
+                    <li class="mb-2"><a href="/tags/INTERNET">Internet</a></li>
+                    <li class="mb-2"><a href="/tags/9 TO 5">9 TO 5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <aside class="lg:block hidden">
+        <InputSearch />
+    </aside>
+    <aside class="lg:hidden">
+        <Fragment
+            set:html={search}
+        />
+    </aside>
+</nav>

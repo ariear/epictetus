@@ -1,0 +1,35 @@
+---
+import Footer from '../components/organisms/Footer.astro';
+import Nav from '../components/organisms/Nav.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class:list={[
+		'bg-main-bg-gradient bg-[#111827] bg-no-repeat',
+		'text-white font-patrick',
+		'lg:w-[990px] xl:w-[1080px]',
+		'mx-auto px-4 sm:px-8'
+	]}>
+		<Nav />
+		<slot />
+		<Footer />
+	</body>
+</html>

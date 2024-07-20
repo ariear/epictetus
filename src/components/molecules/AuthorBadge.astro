@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	photo: string;
+	name: string;
+	role: string;
+}
+
+const { photo, name, role } = Astro.props;
+---
+<div class="flex items-center">
+    <Image
+        src={photo}
+        alt='pp'
+        width={48}
+        height={48}
+        class:list={[
+            'w-[48px] h-[48px]',
+            'rounded-full',
+            'object-cover',
+            'mr-4'
+        ]}
+    />
+    <aside>
+        <p class="mb-1">{name}</p>
+        <p class="text-sm text-white/80">{role}</p>
+    </aside>
+</div>

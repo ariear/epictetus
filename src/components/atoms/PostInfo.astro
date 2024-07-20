@@ -1,0 +1,23 @@
+---
+import { format } from 'date-fns';
+
+interface Props {
+	tags: string;
+    pubDate: Date;
+}
+
+const { tags, pubDate } = Astro.props;
+---
+<span class:list={[
+    'text-white/80 text-sm',
+    'flex items-center'
+]}>
+    <p>{tags[0]}</p>
+    <span class:list={[
+        'w-1.5 h-1.5',
+        'rounded-full',
+        'bg-white/80',
+        'mx-3'
+    ]}></span>
+    <p>{format(pubDate, 'MMMM d, Y')}</p>
+</span>

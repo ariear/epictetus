@@ -4,11 +4,11 @@ title: 'Understanding color theory: the color wheel and finding'
 pubDate: 2021-07-02
 description: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum."
 author:
-  photo: "http://localhost:4321/pp/elaina.jpg"
+  photo: "https://epictetus-psi.vercel.app/pp/elaina.jpg"
   name: "Leslie Alexander"
   role: "UI Designer"
 image:
-  url: "http://localhost:4321/thumbnail/post.png"
+  url: "https://epictetus-psi.vercel.app/thumbnail/post.png"
   alt: "Color theory"
 tags: ["UI Design"]
 ---

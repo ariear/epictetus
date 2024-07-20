@@ -4,11 +4,11 @@ title: 'How to design a product that can grow itself 10x in year'
 pubDate: 2021-06-05
 description: "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor."
 author:
-  photo: "http://localhost:4321/pp/mas.jpg"
+  photo: "https://epictetus-psi.vercel.app/pp/mas.jpg"
   name: "Jenny Wilson"
   role: "Product Designer"
 image:
-  url: "http://localhost:4321/thumbnail/lepimac.png"
+  url: "https://epictetus-psi.vercel.app/thumbnail/lepimac.png"
   alt: "lepimac"
 tags: ["Back-end"]
 ---

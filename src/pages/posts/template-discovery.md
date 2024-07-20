@@ -4,11 +4,11 @@ title: 'Email Love - Email Inspiration, Templates and Discovery'
 pubDate: 2021-06-10
 description: "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else."
 author:
-  photo: "http://localhost:4321/pp/mas.jpg"
+  photo: "https://epictetus-psi.vercel.app/pp/mas.jpg"
   name: "Robert Fox"
   role: "Front-end Engineer"
 image:
-  url: "http://localhost:4321/thumbnail/ngopiwin.png"
+  url: "https://epictetus-psi.vercel.app/thumbnail/ngopiwin.png"
   alt: "Ngopiwin"
 tags: ["Front-end"]
 ---

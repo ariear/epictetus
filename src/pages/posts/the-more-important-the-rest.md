@@ -4,11 +4,11 @@ title: 'The More Important the Work, the More Important the Rest'
 pubDate: 2021-06-17
 description: "Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high."
 author:
-  photo: "http://localhost:4321/pp/mama.jpg"
+  photo: "https://epictetus-psi.vercel.app/pp/mama.jpg"
   name: "Esther Howard"
   role: "Entrepreneur"
 image:
-  url: "http://localhost:4321/thumbnail/ngopi.png"
+  url: "https://epictetus-psi.vercel.app/thumbnail/ngopi.png"
   alt: "ngopi"
 tags: ["9 TO 5"]
 ---

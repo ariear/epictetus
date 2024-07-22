@@ -1,66 +1,87 @@
 ---
 import InputSearch from "../molecules/InputSearch.astro";
 import MobileMenu from "../molecules/MobileMenu.astro";
-import logo from "/icons/logo.svg?raw"; 
+import logo from "/icons/logo.svg?raw";
 import down from "/icons/nav-down.svg?raw";
 import search from "/icons/search.svg?raw";
 ---
-<nav class:list={[
-    'flex items-center justify-between',
-    'pt-5 sm:pt-12 pb-5 sm:pb-10'
-]}>
-    <MobileMenu />
-    <aside class="flex items-center">
-        <a href="/">
-            <Fragment
-                set:html={logo}
-            />
-        </a>
-        <ul class:list={[
-            'hidden lg:flex',
-            'ml-16'
-        ]}>
-            <li class="mr-11">
-                <a href="/tags/UI Design">UI Design</a>
-            </li>
-            <li class="mr-11">
-                <a href="/tags/Front-end">Front-end</a>
-            </li>
-            <li class="mr-11">
-                <a href="/tags/Back-end">Back-end</a>
-            </li>
-            <li class:list={[
-                'grid grid-cols-2 gap-x-2 items-center',
-                'relative',
-                'cursor-pointer',
-                'group'
-            ]}>
-                <a>Lainnya</a>
-                <Fragment
-                    set:html={down}
-                />
-                <ul class:list={[
-                    'w-36',
-                    'absolute top-6 z-10',
-                    'bg-[#1F2937] bg-opacity-90',
-                    'pt-2 px-4',
-                    'rounded-xl',
-                    'text-sm',
-                    'group-hover:block hidden'
-                ]}>
-                    <li class="mb-2"><a href="/tags/INSPIRATIONS">Inspirations</a></li>
-                    <li class="mb-2"><a href="/tags/INTERNET">Internet</a></li>
-                    <li class="mb-2"><a href="/tags/9 TO 5">9 TO 5</a></li>
-                </ul>
-            </li>
+
+<nav
+  class:list={[
+    "flex items-center justify-between",
+    "pt-5 sm:pt-12 pb-5 sm:pb-10",
+  ]}
+>
+  <MobileMenu />
+  <aside class="flex items-center">
+    <a href="/">
+      <Fragment set:html={logo} />
+    </a>
+    <ul class:list={["hidden lg:flex", "ml-16"]}>
+      <li class="mr-11">
+        <a href="/tags/UI Design">UI Design</a>
+      </li>
+      <li class="mr-11">
+        <a href="/tags/Front-end">Front-end</a>
+      </li>
+      <li class="mr-11">
+        <a href="/tags/Back-end">Back-end</a>
+      </li>
+      <li
+        class:list={[
+          "grid grid-cols-2 gap-x-2 items-center",
+          "relative",
+          "cursor-pointer",
+          "group",
+        ]}
+      >
+        <a>Lainnya</a>
+        <Fragment set:html={down} />
+        <ul
+          class:list={[
+            "w-36",
+            "absolute top-6 z-10",
+            "bg-[#1F2937] bg-opacity-90",
+            "pt-2 px-4",
+            "rounded-xl",
+            "text-sm",
+            "group-hover:block hidden",
+          ]}
+        >
+          <li class="mb-2"><a href="/tags/INSPIRATIONS">Inspirations</a></li>
+          <li class="mb-2"><a href="/tags/INTERNET">Internet</a></li>
+          <li class="mb-2"><a href="/tags/9 TO 5">9 TO 5</a></li>
         </ul>
-    </aside>
-    <aside class="lg:block hidden">
-        <InputSearch />
-    </aside>
-    <aside class="lg:hidden">
-        <Fragment
-            set:html={search}
-        />
-    </aside>
+      </li>
+    </ul>
+  </aside>
+  <aside class="lg:block hidden">
+    <InputSearch />
+  </aside>
+  <aside class="lg:hidden">
+    <Fragment set:html={search} />
+  </aside>
 </nav>
+<div id="results"></div>
+
+<script is:inline>
+  document.querySelector("#search")?.addEventListener("input", async (e) => {
+    if (e.target.dataset.loaded !== "true") {
+      e.target.dataset.loaded = "true";
+      window.pagefind = await import("/pagefind/pagefind.js");
+    }
+
+    const search = await window.pagefind.search(e.target.value);
+
+    document.querySelector("#results").innerHTML = "";
+
+    for (const result of search.results) {
+      const data = await result.data();
+      document.querySelector("#results").innerHTML += `
+          <a href="${data.url}" class="block mb-3 bg-[#111827] border-2 border-white rounded-xl p-3">
+            <h3 class="text-lg mb-1">${data.meta.title}</h3>
+            <p>${data.excerpt}</p>
+          </a>`;
+    }
+  });
+</script>

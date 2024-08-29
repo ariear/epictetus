@@ -1,4 +1,5 @@
 ---
+import RightSide from '../../components/organisms/RightSide.astro';
 import WrapPostCard from '../../components/organisms/WrapPostCard.astro';
 import Layout from '../../layouts/Layout.astro';
 
@@ -24,9 +25,14 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 <Layout title={`Posts with tag ${tag}`}>
-    <h1 class:list={[
-        'text-center text-3xl',
-        'py-4 sm:py-10'
-    ]}>{tag}</h1>
-    <WrapPostCard posts={posts} />
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:w-9/12 lg:pr-6">
+      <h1 class:list={[
+          'text-center text-3xl',
+          'py-4 sm:py-10'
+      ]}>{tag}</h1>
+      <WrapPostCard posts={posts} />
+    </div>
+    <RightSide />
+  </div>
 </Layout>

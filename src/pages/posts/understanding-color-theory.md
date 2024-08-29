@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Understanding color theory: the color wheel and finding'
 pubDate: 2021-07-02
-description: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum."
+description: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor."
 author:
   photo: "https://epictetus-psi.vercel.app/pp/elaina.jpg"
   name: "Leslie Alexander"
@@ -10,7 +10,7 @@ author:
 image:
   url: "https://epictetus-psi.vercel.app/thumbnail/post.png"
   alt: "Color theory"
-tags: ["UI Design"]
+tags: ["Front-end"]
 ---
 Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.
 

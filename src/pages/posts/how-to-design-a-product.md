@@ -10,7 +10,7 @@ author:
 image:
   url: "https://epictetus-psi.vercel.app/thumbnail/color.png"
   alt: "Design"
-tags: ["INTERNET"]
+tags: ["Front-end"]
 ---
 Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.
 

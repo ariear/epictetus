@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'The More Important the Work, the More Important the Rest'
 pubDate: 2021-06-17
-description: "Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high."
+description: "Suitable Quality is determined by product users, clients or customers, not by society in general."
 author:
   photo: "https://epictetus-psi.vercel.app/pp/mama.jpg"
   name: "Esther Howard"
@@ -10,7 +10,7 @@ author:
 image:
   url: "https://epictetus-psi.vercel.app/thumbnail/ngopi.png"
   alt: "ngopi"
-tags: ["9 TO 5"]
+tags: ["Book Review"]
 ---
 Male sixth sea it a. Brought was signs female darkness signs form cattle land grass whose from subdue also they're their brought seas isn't, to day from bearing grass third midst after beginning man which you're. Dry, gathering beginning given made them evening.
 

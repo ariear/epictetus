@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import HeroPostCard from '../components/organisms/HeroPostCard.astro';
 import WrapPostCard from '../components/organisms/WrapPostCard.astro';
+import RightSide from '../components/organisms/RightSide.astro';
 
 let allPosts = await Astro.glob("../pages/posts/*.md");
 allPosts.sort((a, b) => {
@@ -13,12 +14,17 @@ const mainPost = allPosts[0];
 allPosts = allPosts.slice(1)
 ---
 
-<Layout title="Epictetus">
-	<HeroPostCard
-		data={mainPost.frontmatter}
-		url={mainPost.url}
-	/>
-	<WrapPostCard
-		posts={allPosts}
-	/>
+<Layout title="Etika Profesi">
+	<div class="flex flex-col lg:flex-row">
+		<div class="lg:w-9/12 lg:pr-6">
+			<HeroPostCard
+				data={mainPost.frontmatter}
+				url={mainPost.url}
+			/>
+			<WrapPostCard
+				posts={allPosts}
+			/>
+		</div>
+		<RightSide />
+	</div>
 </Layout>

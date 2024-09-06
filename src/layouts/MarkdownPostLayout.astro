@@ -2,12 +2,16 @@
 import { Image } from "astro:assets";
 import PostInfo from "../components/atoms/PostInfo.astro";
 import AuthorBadge from "../components/molecules/AuthorBadge.astro";
-import Layout from "./Layout.astro";
 import RightSide from "../components/organisms/RightSide.astro";
+import PostLayout from "./PostLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`Etika Profesi | ${frontmatter.title}`}>
+<PostLayout 
+    title={`${frontmatter.title} | Arie Akbarull Ridho`}
+    desc={frontmatter.description}
+    thumb={frontmatter.image.url}
+    >
     <div class="flex flex-col lg:flex-row">
         <div class="lg:w-9/12 lg:pr-6">
             <div class:list={[
@@ -58,4 +62,4 @@ const { frontmatter } = Astro.props;
         </div>
         <RightSide />
     </div>
-</Layout>
+</PostLayout>

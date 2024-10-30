@@ -56,3 +56,6 @@ Relevant Information -> Kita harus memberikan informasi yang relevant terhadap b
 Law Abiding -> Semua bisnis harus taat dengan hukum, baik bisnis kecil maupun bisnis besar.
 
 Fulfilling Commitments -> Setiap bisnis yang dikembangkan pasti mempunyai komitmennya tersendiri dimana bisa saja komitmen satu bisnis dengan bisnis yang lain berbeda.
+
+## Pendapatku
+Menurutku, etika bisnis sangat penting ketika kita menjalankan sebuah bisnis. Kita bisa melihat berbagai aspek etika, baik di lingkungan sekitar, pembeli, penjual, produser, pokoknya semua yang terlibat pada bisnis itu, harus mempunyai dasar etika.

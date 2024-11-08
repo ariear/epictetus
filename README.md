@@ -5,3 +5,5 @@ Epictetus is a blog template built with Astro, designed for simplicity and perfo
 - **Minimalist Design:** Clean and modern UI design sourced from [codedesign](https://codedesign.dev/) for a sleek and distraction-free reading experience.
 - **Static Site Generation (SSG):** Lightning-fast page loads and enhanced SEO.
 - **Live Search with Pagefind:** Seamless and efficient search functionality for improved user navigation.
+
+### Example Usage : [Etika Profesi](https://github.com/ariear/epictetus/tree/etika-profesi)

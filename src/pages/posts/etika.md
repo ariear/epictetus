@@ -8,7 +8,7 @@ author:
   name: "Arie Akbarull Ridho"
   role: "Mahasiswa Informatika"
 image:
-  url: "https://sahabat.pegadaian.co.id/wp-content/uploads/2017/12/WK4-SP-Manfaat-Etika-Bisnis-Bagi-Perusahaan.jpg"
+  url: "https://storage.nu.or.id/storage/post/16_9/big/wk4-sp-manfaat-etika-bisnis-bagi-perusahaan_1707115575.webp"
   alt: "etika"
 tags: ["Etika Profesi"]
 ---
